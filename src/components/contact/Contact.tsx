@@ -14,15 +14,6 @@ interface FormState {
   timeline: string;
 }
 
-const budgetOptions = [
-  "Select a budget range",
-  "$1,000 – $3,000",
-  "$3,000 – $5,000",
-  "$5,000 – $10,000",
-  "$10,000 – $25,000",
-  "$25,000+",
-];
-
 const timelineOptions = [
   "Select a timeline",
   "Less than 1 month",
@@ -292,23 +283,16 @@ export function Contact() {
                   >
                     Budget Range
                   </label>
-                  <select
+                  <input
                     id="contact-budget"
                     name="budget"
+                    type="text"
                     required
                     value={form.budget}
                     onChange={handleChange}
-                    className={cn(
-                      selectBase,
-                      !form.budget && "text-secondary/40"
-                    )}
-                  >
-                    {budgetOptions.map((option, i) => (
-                      <option key={option} value={i === 0 ? "" : option} disabled={i === 0}>
-                        {option}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="Enter your estimated budget"
+                    className={inputBase}
+                  />
                 </div>
 
                 {/* Project Details */}
