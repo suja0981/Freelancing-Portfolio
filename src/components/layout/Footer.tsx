@@ -159,11 +159,25 @@ export function Footer() {
                   sujalwadhankar999@gmail.com
                 </a>
                 <a
+                  href="mailto:shrihitbandawar@gmail.com"
+                  className="flex items-center gap-2.5 text-secondary hover:text-primary text-sm transition-colors duration-200"
+                >
+                  <Mail size={15} className="shrink-0" />
+                  shrihitbandawar@gmail.com
+                </a>
+                <a
                   href="tel:+918379892559"
                   className="flex items-center gap-2.5 text-secondary hover:text-primary text-sm transition-colors duration-200"
                 >
                   <Phone size={15} className="shrink-0" />
                   +91 83798 92559
+                </a>
+                <a
+                  href="tel:+919373452421"
+                  className="flex items-center gap-2.5 text-secondary hover:text-primary text-sm transition-colors duration-200"
+                >
+                  <Phone size={15} className="shrink-0" />
+                  +91 93734 52421
                 </a>
               </div>
             </div>
