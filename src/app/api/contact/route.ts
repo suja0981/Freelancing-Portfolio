@@ -15,7 +15,12 @@ export async function POST(request: Request) {
     }
 
     const apiKey = process.env.RESEND_API_KEY;
-    const receiver = process.env.CONTACT_RECEIVER || "sujalwadhankar999@gmail.com";
+    const receiver = process.env.CONTACT_RECEIVER
+      ? process.env.CONTACT_RECEIVER.split(",")
+      : [
+          "sujalwadhankar999@gmail.com",
+          "shrihitbandawar@gmail.com",
+        ];      
     const sender = process.env.EMAIL_FROM || "onboarding@resend.dev";
 
     const isConfigured =
@@ -87,6 +92,11 @@ export async function POST(request: Request) {
           <p style="font-size: 14px; font-weight: bold; margin: 0; color: #1B1B1B;">CodeCrew Agency</p>
           <p style="font-size: 12px; color: #6D6D6D; margin: 3px 0 0 0;">We build ideas into digital products</p>
           <p style="font-size: 12px; margin: 10px 0 0 0;"><a href="mailto:sujalwadhankar999@gmail.com" style="color: #FF8A3D; text-decoration: none;">sujalwadhankar999@gmail.com</a></p>
+        </div>
+        <div style="text-align: center;">
+          <p style="font-size: 14px; font-weight: bold; margin: 0; color: #1B1B1B;">CodeCrew Agency</p>
+          <p style="font-size: 12px; color: #6D6D6D; margin: 3px 0 0 0;">We build ideas into digital products</p>
+          <p style="font-size: 12px; margin: 10px 0 0 0;"><a href="mailto:shrihitbandawar@gmail.com" style="color: #FF8A3D; text-decoration: none;">shrihitbandawar@gmail.com</a></p>
         </div>
       </div>
     `;
